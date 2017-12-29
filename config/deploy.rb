@@ -8,6 +8,6 @@ set :linked_files, %w{config/database.yml config/secrets.yml config/secrets.yml.
 set :linked_dirs, %w{log tmp/pids public/assets tmp/cache tmp/sockets vendor/bundle}
 set :ssh_options, { :forward_agent => true }
 set :pry, false
-set :rvm_ruby_version, '2.4.1@pushkin-bot'
+set :rvm_ruby_version, '2.4.1'
 set :puma_preload_app, true
 set :puma_init_active_record, true
