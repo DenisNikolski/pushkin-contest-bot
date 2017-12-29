@@ -1,0 +1,17 @@
+<h1>History</h1>
+<table>
+  <tr>
+    <th>Question</th>
+    <th>Question id</th>
+    <th>Level</th>
+    <th>Answer</th>
+  </tr>
+  <% @results.each do |result| %>
+      <tr>
+        <td><%= result.question %></td>
+        <td><%= result.question_id %></td>
+        <td><%= result.level %></td>
+        <td><%= result.answer %></td>
+      </tr>
+  <% end %>
+</table>
