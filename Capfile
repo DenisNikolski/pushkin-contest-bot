@@ -6,8 +6,8 @@ require 'capistrano/bundler'
 require 'capistrano/rails'
 require 'capistrano/rails/assets'
 require 'capistrano/rails/migrations'
-require 'capistrano/rails/puma'
-require 'capistrano/rails/puma/nginx'
+require 'capistrano/puma'
+require 'capistrano/puma/nginx'
 
 install_plugin Capistrano::SCM::Git
 install_plugin Capistrano::Puma
