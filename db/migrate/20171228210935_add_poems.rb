@@ -5,7 +5,6 @@ class AddPoems < ActiveRecord::Migration[5.1]
 
     poems.each do |key, value|
       Poem.create title: key, text: value
-      puts key, value
     end
   end
 
