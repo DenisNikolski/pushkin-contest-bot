@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   resources :article
   resources :quiz, only: [:index]
+  post 'quiz', to: 'quiz#index'
 
   root 'main#index'
 end
