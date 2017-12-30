@@ -4,14 +4,14 @@ class QuizController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    question = params[:question]
+    question = params[:question].strip
     id = params[:id]
     level = params[:level].to_i
 
     case level
     when 1
       answer = Poem.select('title').find_by('text LIKE ?', "%#{question}%")
-      answer = answer.nil? ? 'can\'t find' : answer[:title]
+      answer = answer.nil? ? 'can\'t find' : answer[:title].strip
     end
 
     uri = URI('http://pushkin.rubyroidlabs.com/quiz')
