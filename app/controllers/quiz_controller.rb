@@ -20,7 +20,6 @@ class QuizController < ApplicationController
     }
     response = Net::HTTP.post_form(uri, parameters)
     render json: 'done'
-    Result.create question: question, question_id: id, level: level, answer: answer
-
+    Result.create(question: question, question_id: id, level: level, answer: answer)
   end
 end
